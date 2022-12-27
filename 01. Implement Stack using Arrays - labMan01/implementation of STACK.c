@@ -23,7 +23,7 @@ void creatingEmptyStack(stack1 *s){
 
 //checking if the stack is full
 int isFull(stack1 *s){
-    if (s->top = StackSize -1)
+    if (s->top == StackSize - 1)
         return 1;
     else
         return 0;
