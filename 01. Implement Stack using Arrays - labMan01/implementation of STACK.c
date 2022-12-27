@@ -5,7 +5,7 @@
 
 #define StackSize 10
 
-int count = 0;
+int itemCount = 0;
 
 //creating  a stack
 
@@ -46,4 +46,38 @@ void push (stack1 *s, int newItem){
         s->top++;
         s->items[s->top] = newItem;
     }
+    itemCount++;
+}
+//removing item by pop
+void pop(stack1 *s){
+    if(isEmpty(s)){
+        printf("\nStack is Empty.");
+    }
+    else{
+        printf("\nItem removed: %d", s->items[s->top]);
+        s->top--;
+    }
+    itemCount--;
+}
+//output function
+void display(stack1 *s){
+    printf("\nStack: ");
+    for (int i = 0; i<count; i++){
+        printf("%d ", s->items[i]);
+    }
+}
+
+int main(){
+    stack1 *s = (stack1 *)malloc(sizeof(stack1));
+    creatingEmptyStack(s);
+    push(s, 17);
+    push(s, 5);
+    push(s, 123);
+    push(s, 25);
+    push(s, 12);
+    display(s);
+
+    push(s, 83);
+    display(s);
+
 }
