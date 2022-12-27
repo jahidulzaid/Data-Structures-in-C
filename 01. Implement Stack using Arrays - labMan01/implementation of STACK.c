@@ -62,7 +62,7 @@ void pop(stack1 *s){
 //output function
 void display(stack1 *s){
     printf("\nStack: ");
-    for (int i = 0; i<count; i++){
+    for (int i = 0; i<itemCount; i++){
         printf("%d ", s->items[i]);
     }
 }
